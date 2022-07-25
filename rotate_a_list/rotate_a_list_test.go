@@ -5,20 +5,44 @@ import (
 	"testing"
 )
 
-func TestRotate(t *testing.T) {
-	t.Run("Given a list of numbers should rotate at one position", func(t *testing.T) {
-		list := []int{1, 2, 3, 4, 5}
-		result := Rotate(list, 1)
-		assert.Equal(t, []int{2, 3, 4, 5, 1}, result)
-	})
-	t.Run("Given a list of numbers should rotate at two positions", func(t *testing.T) {
-		list := []int{1, 2, 3, 4, 5, 6}
-		result := Rotate(list, 2)
-		assert.Equal(t, []int{3, 4, 5, 6, 1, 2}, result)
-	})
-	t.Run("Given a list of numbers should rotate at 8 positions", func(t *testing.T) {
-		list := []int{1, 2, 3, 4, 5, 6}
-		result := Rotate(list, 8)
-		assert.Equal(t, []int{3, 4, 5, 6, 1, 2}, result)
-	})
+func TestRotateAList(t *testing.T) {
+	adderTest := []struct {
+		Name     string
+		List     []int
+		Number   int
+		Expected []int
+	}{
+		{
+			Name:     "Given a list of numbers should rotate at one position",
+			List:     []int{1, 2, 3, 4, 5, 6},
+			Number:   1,
+			Expected: []int{2, 3, 4, 5, 6, 1},
+		},
+		{
+			Name:     "Given a list of numbers should rotate at two positions",
+			List:     []int{1, 2, 3, 4, 5, 6},
+			Number:   2,
+			Expected: []int{3, 4, 5, 6, 1, 2},
+		},
+		{
+			Name:     "Given a list of numbers should rotate at 8 positions",
+			List:     []int{1, 2, 3, 4, 5, 6},
+			Number:   8,
+			Expected: []int{3, 4, 5, 6, 1, 2},
+		},
+		{
+			Name:     "Given an empty list of numbers should return empty list",
+			List:     []int{},
+			Number:   1,
+			Expected: []int{},
+		},
+	}
+
+	for _, tt := range adderTest {
+		t.Run(tt.Name, func(t *testing.T) {
+			list := tt.List
+			result := RotateAList(list, tt.Number)
+			assert.Equal(t, tt.Expected, result)
+		})
+	}
 }
