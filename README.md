@@ -1,1 +1,1 @@
-# katas_golang
+# Katas Golang
