@@ -3,12 +3,13 @@ package square_or_root
 import "math"
 
 func SquareOrRoot(list []int) []int {
-	var result []int
-	for _, number := range list {
-		if math.Sqrt(float64(number)) == math.Trunc(math.Sqrt(float64(number))) {
-			result = append(result, int(math.Sqrt(float64(number))))
+	result := make([]int, len(list))
+	for i, number := range list {
+		square := math.Sqrt(float64(number))
+		if square == math.Trunc(square) {
+			result[i] = int(square)
 		} else {
-			result = append(result, number*number)
+			result[i] = number * number
 		}
 	}
 	return result
