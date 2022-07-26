@@ -1,4 +1,4 @@
-package game_of_three
+package _01_game_of_three
 
 import (
 	"github.com/stretchr/testify/assert"

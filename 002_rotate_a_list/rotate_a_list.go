@@ -1,4 +1,4 @@
-package rotate_a_list
+package _02_rotate_a_list
 
 func RotateAList(list []int, number int) []int {
 	if len(list) == 0 {

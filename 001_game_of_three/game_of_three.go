@@ -1,4 +1,4 @@
-package game_of_three
+package _01_game_of_three
 
 func GameOfThree(number int) []int {
 	var result []int

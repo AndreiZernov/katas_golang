@@ -1,4 +1,4 @@
-package merge_list
+package _05_merge_list
 
 import (
 	"github.com/stretchr/testify/assert"

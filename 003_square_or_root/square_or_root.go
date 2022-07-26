@@ -1,4 +1,4 @@
-package square_or_root
+package _03_square_or_root
 
 import "math"
 

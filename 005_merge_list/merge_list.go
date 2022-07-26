@@ -1,4 +1,4 @@
-package merge_list
+package _05_merge_list
 
 func MergeList(list1, list2 []int64) []int64 {
 	result := make([]int64, 0, len(list1)+len(list2))

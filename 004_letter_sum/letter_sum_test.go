@@ -1,4 +1,4 @@
-package letter_sum
+package _04_letter_sum
 
 import (
 	"github.com/stretchr/testify/assert"

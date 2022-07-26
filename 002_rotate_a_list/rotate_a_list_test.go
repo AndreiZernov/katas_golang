@@ -1,4 +1,4 @@
-package rotate_a_list
+package _02_rotate_a_list
 
 import (
 	"github.com/stretchr/testify/assert"
