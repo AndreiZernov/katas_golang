@@ -1,8 +1,8 @@
 package santas_elevator_part_one
 
-func SantaElevatorPartOne(input string) int {
+func SantaElevatorPartOne(instructions string) int {
 	var floor int
-	for _, stairs := range input {
+	for _, stairs := range instructions {
 		if stairs == '(' {
 			floor++
 		} else if stairs == ')' {
